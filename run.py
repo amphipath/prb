@@ -1,0 +1,107 @@
+from pokerogue import *
+from time import sleep
+
+steps = [
+    startGame,
+    startWave,
+    fight,
+    move1,
+    playOutTurn,
+    ball,
+    useBall.poke,
+    pokemonCaught,
+    gainedExp,
+    expFill,
+    levelledUp,
+    levelledUp,
+    levelledUp,
+    levelledUp,
+    rerollReward,
+    rerollReward,
+    selectReward(2),
+    # wave 2
+    startWave,
+    swap(4),
+    fight,
+    move2,
+    playOutTurn,
+    ball,
+    useBall.poke,
+    pokemonCaught,
+    gainedExp,
+    expFill,
+    levelledUp,
+    expFill,
+    selectReward(3),
+    selectMon(1),
+    # furfrou
+    startWave,
+    doNotSwitch,
+    fight,
+    move2,
+    playOutTurn,
+    ball,
+    useBall.poke,
+    pokemonCaught,
+    gainedExp,
+    expFill,
+    levelledUp,
+    rejectNewMove,
+    levelledUp,
+    levelledUp,
+    levelledUp,
+    rejectNewMove,
+    levelledUp,
+    evolve,
+    rejectNewMove,
+    levelledUp,
+    selectReward(1),
+    selectMon(1),
+    # espurr
+    startWave,
+    doNotSwitch,
+    ball,
+    useBall.rogue,
+    pokemonCaught,
+    rejectNewMon,
+    gainedExp,
+    expFill,
+    levelledUp,
+    levelledUp,
+    levelledUp,
+    rejectNewMove,
+    expFill,
+    levelledUp,
+    selectReward(1),
+    selectMon(1),
+    # cop
+    startWave,
+    startTrainerBattle,
+    fight, move4, playOutTurn,
+    fight, move4, playOutTurn,
+    fight, move2, playOutTurn, playOutTurn,
+    fainted, gainedExp, expFill, levelledUp, levelledUp, levelledUp, levelledUp, playOutTurn,
+    fight, move1, playOutTurn, fight, move1, playOutTurn, fainted, gainedExp, expFill, levelledUp, levelledUp, levelledUp, levelledUp, expFill,
+    fight, move2, playOutTurn, playOutTurn, fainted,  gainedExp, levelledUp, levelledUp, rejectNewMove, levelledUp, Wait(1),levelledUp, levelledUp, endTrainerBattle,
+    selectReward(1), selectMon(1),
+    # linoone + varoom
+    startWave, doNotSwitch, doNotSwitch,
+    fight, move1, doublesTarget(1), fight, move1, doublesTarget(1), playOutTurn, playOutTurn,
+    fainted, gainedExp, gainedExp, expFill, levelledUp, levelledUp, rejectNewMove, Wait(1),
+    fight, move1, doublesTarget(2), fight, move1, doublesTarget(2), playOutTurn, playOutTurn,
+    ball, useBall.poke, playOutTurn, ball, useBall.poke, pokemonCaught, rejectNewMon, gainedExp, gainedExp, levelledUp, expFill, levelledUp, selectReward(3),
+    # yamper
+    startWave, doNotSwitch, ball, useBall.rogue, pokemonCaught, rejectNewMon, gainedExp, expFill, levelledUp, rejectNewMove, expFill, selectReward(1), selectMon(1),
+    # tandemaus
+    startWave, doNotSwitch, ball, useBall.rogue, pokemonCaught, rejectNewMon, gainedExp, expFill, levelledUp, levelledUp, selectReward(2),
+    # linoone
+    startWave, doNotSwitch, ball, useBall.rogue, pokemonCaught, rejectNewMon, gainedExp, expFill, levelledUp, levelledUp, levelledUp, levelledUp, levelledUp, rejectNewMove, selectReward(1),
+    # herdier
+    startWave, doNotSwitch, fight, move1, playOutTurn, Wait(2), fight, move1, playOutTurn, Wait(2), ball, useBall.rogue, pokemonCaught, rejectNewMon, gainedExp, expFill, levelledUp, levelledUp, levelledUp, rejectNewMove, levelledUp, rejectNewMove, levelledUp, levelledUp, endTrainerBattle,
+]
+
+if __name__ == "__main__":
+    sleep(1)
+    for step in steps:
+        step.do()
+        sleep(0.5)
